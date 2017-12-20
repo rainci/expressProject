@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/liuyuxi520/expressProject#readme",
   "devDependencies": {
+    "aliyun-api-gateway": "^1.1.4",
+    "co": "^4.6.0",
     "express": "^4.16.2",
     "jade": "^1.11.0",
     "path": "^0.12.7"

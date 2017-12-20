@@ -26,7 +26,7 @@ app.get('/a.html',function(req,res){
 //只需要require路由模块
 app.use(require('./routes/Routers'));
 
-var server = app.listen(8088,function(){
+var server = app.listen(8089,function(){
     var host = server.address().address;
     var port = server.address().port;
     console.log('Example app listening at http://%s:%s', host, port);
