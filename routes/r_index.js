@@ -11,15 +11,13 @@ router.get('/index.html',function(req,res){
         },
         // tel:'444345'
     };
+    var data={};
     co(function *(){
-        var data = {'a':'test'};
-        data = yield ApiMethod.post('https://alpha-agw.jintoushou.com/gateway/index/info',{});
+        data = yield ApiMethod.post('https://alpha-agw.jintoushou.com/gateway/problem/categories',{});
         console.log('lyxdata',data);
-        pageData.data = data;
+        pageData.data = data.data;
         res.render('../views/index',pageData);
     
     });
-    // res.send('hello world!ss');
-    // console.log('lyxxxxx',res)
 });
 module.exports = router;

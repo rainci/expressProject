@@ -1,7 +1,7 @@
 var Client = require('aliyun-api-gateway').Client,
     client = new Client('24572213','af3195d592d41e8b5aa3737f12e8e468'),
     co = require('co');
-
+    client.stage = 'TEST';
 exports.client = client;
 
 exports.post = function(url,para){
@@ -15,6 +15,8 @@ exports.post = function(url,para){
                 'jts-appId': 'h5',
                 'jts-channel': 'jts'
             },
+            signHeaders: para._signHeaders || {},
+            query: para.query || {},
             data: para.body || {},
             timeout: 15000
         };
