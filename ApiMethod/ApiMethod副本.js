@@ -1,4 +1,4 @@
-var Client = require('jts-api-gateway').Client,
+var Client = require('aliyun-api-gateway').Client,
     client = new Client('24572213','af3195d592d41e8b5aa3737f12e8e468'),
     co = require('co');
     client.stage = 'TEST';
@@ -24,8 +24,7 @@ exports.post = function(url,para){
         try{
             result = yield client.post(url, postdata); 
         }catch (e){
-            result.errCode = e.code;
-            result.msg = e.msg;
+            result.error = e;
         }
         return result;
     });

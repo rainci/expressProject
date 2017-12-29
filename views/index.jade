@@ -12,9 +12,10 @@ html
             else
                 span no tel
 
-            ul.data 
-                each item in data
-                    li 
-                        span #{item.name}
-                        img(src=item.picUrl)
-                        p #{item.description}
+            ul.data
+                if data.length > 0
+                    each item in data
+                        li
+                            span #{item.name}
+                            img(src=item.picUrl)
+                            p #{item.description}
