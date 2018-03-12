@@ -13,7 +13,7 @@ router.get('/index.html',function(req,res){
     };
     var data={};
     co(function *(){
-        data = yield ApiMethod.post('https://alpha-agw.jintoushou.com/gateway/problem/categories',{});
+        data = yield ApiMethod.post('https://alpha-agw.jintoushou.com/gateway/problem/categoriesss',{});
         console.log('lyxdata',data);
         if(data.data && data.data.length){
             pageData.data = data.data;
