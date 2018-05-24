@@ -1,5 +1,6 @@
 var Client = require('aliyun-api-gateway').Client,
-    client = new Client('24572213','af3195d592d41e8b5aa3737f12e8e468'),
+    systemConfig = require('../config/config').systemConfig,
+    client = new Client(systemConfig.appKey,systemConfig.appSecret),
     co = require('co');
     client.stage = 'TEST';
 exports.client = client;

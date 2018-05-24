@@ -13,8 +13,9 @@ html
                 span no tel
 
             ul.data 
-                each item in data
-                    li 
-                        span #{item.name}
-                        img(src=item.picUrl)
-                        p #{item.description}
+                if data
+                    each item in data
+                        li 
+                            span #{item.name}
+                            img(src=item.picUrl)
+                            p #{item.description}

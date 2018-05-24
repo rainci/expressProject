@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var ApiMethod = require('../ApiMethod/ApiMethod');
+// var ApiMethod = require('../ApiMethod/ApiMethod');
 var co = require('co');
 router.get('/index.html',function(req,res){
     var pageData = {
@@ -13,7 +13,7 @@ router.get('/index.html',function(req,res){
     };
     var data={};
     co(function *(){
-        data = yield ApiMethod.post('https://alpha-agw.jintoushou.com/gateway/problem/categories',{});
+        // data = yield ApiMethod.post('https://alpha-agw.jintoushou.com/gateway/problem/categories',{});
         console.log('lyxdata',data);
         pageData.data = data.data;
         res.render('../views/index',pageData);
