@@ -12,10 +12,17 @@ html
             else
                 span no tel
 
+<<<<<<< HEAD
             ul.data 
                 if data
                     each item in data
                         li 
+=======
+            ul.data
+                if data.length > 0
+                    each item in data
+                        li
+>>>>>>> a57a86e3b263de3d93d50d5fc82a4bbc4f72fc93
                             span #{item.name}
                             img(src=item.picUrl)
                             p #{item.description}
