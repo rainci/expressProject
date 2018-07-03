@@ -1,0 +1,11 @@
+{
+    "data": {
+      "pid": 12345,
+      "url": "localhost/index",
+      "userId": "qq123"
+    },
+    "errorCode": 0,
+    "resultMsg": "bad sth",
+    "success": false,
+    "systemTime": 0
+  }

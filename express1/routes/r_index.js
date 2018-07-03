@@ -26,7 +26,8 @@ router.get('/index.html',function(req,res){
     //         }
     //         pageData.data = [];
     //     }
-        axios.post('http://192.168.130.103:88/API/getdata.json')//URL已增加时间戳
+        // axios.post('http://192.168.130.103:88/API/getdata1.json')//URL已增加时间戳
+        axios.post('http://192.168.130.155:8089/test1.json')//URL已增加时间戳
         .then(function (response) {
         console.log('success',response.status,response.data)
         
